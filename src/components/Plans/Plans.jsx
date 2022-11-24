@@ -4,7 +4,7 @@ import './Plans.css';
 
 const Plans = () => {
   return (
-    <section className='plans-container'>
+    <section className='plans-container' id='plans'>
         <div className="blur plans-blur-1"></div>
         <div className="blur plans-blur-2"></div>
         <div className="programs-header">
