@@ -1,13 +1,10 @@
-import React from 'react';
 import './Programs.css';
 import { programsData } from '../../data/programsData';
-import { plansData } from '../../data/plansData';
-import { testimonialsData } from '../../data/testimonialsData';
 import RightArrow from '../../assets/rightArrow.png';
 
 const Programs = () => {
   return (
-    <div className='Programs' id='programs'>
+    <section className='Programs' id='programs'>
         <div className="programs-header">
             <span className='stroke-text'>Explore our</span>
             <span>Programs</span>
@@ -15,8 +12,8 @@ const Programs = () => {
         </div>
 
         <div className='program-categories'>
-            {programsData.map((program) => (
-                <div className="category">
+            {programsData.map((program, i) => (
+                <div className="category" key={i}>
                     {program.image}
                     <span>{program.heading}</span>
                     <span>{program.details}</span>
@@ -28,7 +25,7 @@ const Programs = () => {
                 </div>
             ))}
         </div>
-    </div>
+    </section>
   )
 }
 
